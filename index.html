@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/shape.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+
+
+
+<style>
+
+
+.banner{
+ 
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),  url(image/banner.gif);   
+     background-repeat:no-repeat;
+     background-size:100% 100%;
+     background-attachment: fixed;     
+   
+     display: flex;
+     flex-direction: column;
+  background-size:cover;
+}
+
+
+.blue_bg{
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),  url(image/banner.gif);   
+     background-repeat:no-repeat;
+     background-size:100% 100%;
+     background-attachment: fixed;     
+  
+  background-size:cover;
+
+}
+
+
+
+@media (max-width: 900px) {
+
+  .banner{
+ height:0vh;
+
+}
+
+
+}
+  </style>
+
+
+
+
+
+
+
+
+<body>
+
+
+
+<div class="banner"><!----------banner--->
+
+  
+  
+  
+  <header class="nav" id="header-sticky">
+
+
+  
+
+    <a href="#" class="logo"> <img src="image/logo.png" class="aspeedlogo"></a>
+
+
+
+
+
+
+
+
+
+<!-----------------search in mobile--------->
+
+
+
+ <div class="search_head1">
+   
+ <input type="text" class="header_search1"   placeholder="Search...">
+
+<div class="searchicon1"  >
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg>
+</div>
+
+</div>
+
+<!-------------end----search in mobile--------->
+
+
+
+
+
+
+
+
+
+<div class="search_head">
+   
+
+    <input type="text" class="header_search" id="search-input"  placeholder="Search...">
+
+
+<div class="category_headera" id="search-category">
+All category
+</div>
+
+
+
+<div class="searchicon" id="search-icon">
+ 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg>
+
+</div>
+
+
+
+</div>
+
+
+
+
+    
+
+
+
+
+
+
+ 
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">manufacturers</a></li>
+      <li><a href="#">blog</a></li>
+      <li><a href="#">about us</a></li>
+      <li><a href="#">fact</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+
+
+
+
+  </header>
+
+
+
+
+<script>
+window.addEventListener('scroll', function() {
+  let header = document.querySelector('header');
+  header.classList.toggle('sticky', window.scrollY > 0);
+});
+
+
+
+const searchInput = document.getElementById('search-input');
+const searchIcon = document.getElementById('search-icon');
+const searchcategory = document.getElementById('search-category');
+const header = document.getElementById('header-sticky');
+let prevScrollPos = window.pageYOffset;
+
+window.addEventListener('scroll', () => {
+    const currentScrollPos = window.pageYOffset;
+
+    if (currentScrollPos < header.clientHeight) {
+        // Scrolling within the header area
+        header.style.top = '0';
+        searchInput.style.display = 'none'; // Hide the search input
+        searchIcon.style.display = 'none'; // Hide the search input
+        searchcategory.style.display = 'none'; // Hide the search input
+    } else if (prevScrollPos > currentScrollPos) {
+        // Scrolling up outside the header area
+        header.style.top = '0';
+        searchInput.style.display = 'block'; // Show the search input
+        searchIcon.style.display = 'block'; // Hide the search input
+        searchcategory.style.display = 'block'; // Hide the search input
+    } else {
+        // Scrolling down outside the header area
+        header.style.top = '0'; // Hide the header
+        searchInput.style.display = 'block'; // Show the search input
+        searchIcon.style.display = 'block'; // Hide the search input
+        searchcategory.style.display = 'block'; // Hide the search input
+    }
+
+    prevScrollPos = currentScrollPos;
+});
+
+</script>
+
+<div class="homecontent"><!----------homecontent--->
+<div data-aos="fade-up"
+     data-aos-duration="3000">
+
+<h1 class="h1content">Aspeed Electronics</h1>
+<h1 class="h1content1">Your one-stop-shop for all of your electronics needs! 
+</h1>
+
+</div>
+
+
+<div class="btn_flex"><!----------btn_flex--->
+
+
+<input type="text" class="search" placeholder="search items...">
+
+
+
+<div class="search_all" style="display:flex">
+All category 
+&nbsp;
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z"/>
+</svg>
+</div>
+
+
+<div class="search_inside">
+
+<button class="search_button"> 
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg>
+
+Search
+</button>
+
+</div>
+
+
+
+
+</div><!----------btn_flex--->
+
+
+
+
+<div class="btnflex"><!----------btnflex--->
+
+<button class="btn"> 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="white" viewBox="0 0 16 16">
+  <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4h-8.5ZM15 4.667V5H1v-.333L1.5 4h6V1h1v3h6l.5.667Z"/>
+</svg>
+track your order 
+</button>
+
+
+<button class="btn">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-person-fill-gear" viewBox="0 0 16 16">
+  <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Zm9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+</svg>
+my account 
+</button>
+
+
+
+
+
+<button class="btn"> 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="white" viewBox="0 0 16 16">
+  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
+</svg>
+shop 
+</button>
+
+</div><!----------btnflex--->
+
+
+
+</div><!----------homecontent--->
+</div><!----------banner--->
+
+
+
+
+
+<div class="block" >
+
+<div class="head_title">
+<center>
+
+
+  <h1 >Elevate Your Lifestyle! </h1>
+
+</center>
+</div>
+
+</div>
+
+
+<div class="custom-shape-divider-top-1695713538">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+    </svg>
+</div>
+
+
+
+<style>
+
+
+
+</style>
+
+
+
+
+
+<div class="white_bg">
+
+<div class="none">
+
+<div class="slideshow-container">
+        <!-- Slides -->
+        <div class="slide fade">
+        <img src="image/mdp.jpg"  alt="Slide 1" class="featured_slide">
+        </div>
+
+        <div class="slide fade">
+        <img src="image/mdp1.jpg" alt="Slide 2" class="featured_slide">
+        </div>
+
+        <div class="slide fade">
+        <img src="image/mdp2.jpg" alt="Slide 3" class="featured_slide">
+        </div>
+
+        <!-- Navigation Dots -->
+        <div style="text-align: center; display:none">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+
+<div class="navcp">
+
+ <div class="scrollbar">
+
+    <div class="othernav"><!----------bestsell--->
+
+
+<div class="other_nav" style="background-color:#DF7F1F">
+products
+</div>
+
+
+
+<div class="other_nav" style="background-color:#1F93DF ">
+manufacturers
+</div>
+
+
+
+<div class="other_nav" style="background-color:#1CC361 ">
+about&nbsp;us
+</div>
+
+<div class="other_nav">
+contact
+</div>
+
+
+
+
+</div><!----------bestsell--->
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="scrollbar"><!----------scrollbar--->
+
+
+
+
+
+
+
+
+<div class="none" style="padding:0px 10px; margin-bottom:6px"> <!----------none------>
+
+
+<div class="gitna1"> <!----------gitna1--->
+
+<div class="class1"><!----------class1------>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgba(168, 76, 0, 0.925)" class="bi bi-bag-plus" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+</svg>
+</div><!----------class1------>
+             &nbsp;
+      <div class="class2" style="color:rgba(168, 76, 0, 0.925); font-weight:500;"><!----------class2------>
+       FEATURED
+     </div><!----------class2------>
+
+
+   
+
+     </div><!----------gitna1--->
+
+
+
+     <div class="gitna1"> <!----------gitna1--->
+     <div class="class1" style="color:gray"><!----------class1------>
+     see more 
+     </div><!----------class1------>
+
+     <div class="class2"><!----------class2------>
+     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="gray" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+<path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+</div><!----------class2------>
+</div><!----------gitna1--->
+
+</div><!----------none------>
+
+
+
+
+
+
+
+
+
+        <div class="bestsell">
+
+
+
+
+
+
+<div class="container">
+<img src="image/1.png"  alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">
+
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+</svg>
+
+</div>
+  </div>
+</div>
+
+
+
+
+<div class="container">
+<img src="image/2.png"  alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+</svg>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container">
+<img src="image/3.png"  alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+</svg>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="container">
+<img src="image/2.png"  alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+</svg>
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container">
+<img src="image/1.png"  alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+</svg>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+</div><!----------scrollbar--->
+
+
+
+</div><!----------scrollbar--->
+
+
+
+
+
+
+
+<!----------featured  products-------------------------------------------------------------------------------->
+<div class="padding">
+<div class="homecontent1"><!----------homecontent1--->
+
+
+<div class="flex_gap"><!----------flex--->
+
+  
+<div class="ibox">
+<div class="inside_ibox">
+
+
+  <div class="featured_title">
+  <h1 class="title1"> featured producs</h1>
+<center>
+  <p style="color:rgb(70, 70, 70);">Elevate Your Lifestyle with Our Top Picks</p>
+
+
+ 
+</center>
+  </div>
+
+
+
+  <div class="flex"><!----------flex--->
+<img src="image/mdp.jpg"  class="featured_img">
+<img src="image/mdp1.jpg"  class="featured_img">
+<img src="image/mdp2.jpg"  class="featured_img">
+<img src="image/mdp3.jpg"  class="featured_img">
+</div>
+
+
+
+
+<div class="flex"><!----------flex--->
+<img src="image/4.jpeg" class="featured_imgbellow" style="border-radius:0px 0px 0px 20px">
+<img src="image/5.jpeg" class="featured_imgbellow">
+<img src="image/4.jpeg" class="featured_imgbellow">
+<img src="image/7.jpeg" class="featured_imgbellow" style="border-radius:0px 0px 20px 0px">
+</div>
+
+
+
+</div>
+</div>
+
+
+<style>
+
+
+</style>
+
+
+<div class="ibox1">
+
+
+
+<div class="flex_gap2"><!----------flex2--->
+
+<div class="two_box"><!----------two_box--->
+<img src="image/1.png" class="featured_image">
+
+<div class="txt_btn">
+<p class="show" style="color:rgb(70, 70, 70)">Lorem ipsum</p>
+<p style="color:rgb(70, 70, 70)">$0102 USD</p>
+<button class="btn_buy">Buy now</button>
+</div>
+
+</div><!----------two_box--->
+
+
+
+
+<div class="two_box"><!----------two_box--->
+<img src="image/2.png" class="featured_image">
+<div class="txt_btn">
+<p class="show" style="color:rgb(70, 70, 70)">Lorem ipsum</p>
+<p style="color:rgb(70, 70, 70)">$0102 USD</p>
+<button class="btn_buy">Buy now</button>
+</div>
+
+</div><!----------two_box--->
+
+
+</div>
+
+
+
+<br>
+
+<div class="flex_gap2"><!----------flex2--->
+
+<div class="two_box"><!----------two_box--->
+<img src="image/2.png" class="featured_image">
+<div class="txt_btn">
+<p class="show" style="color:rgb(70, 70, 70)">Lorem ipsum</p>
+<p style="color:rgb(70, 70, 70)">$0102 USD</p>
+<button class="btn_buy">Buy now</button>
+</div>
+</div>
+
+<div class="two_box"><!----------two_box--->
+<img src="image/3.png" class="featured_image">
+<div class="txt_btn">
+<p class="show" style="color:rgb(70, 70, 70)">Lorem ipsum</p>
+<p style="color:rgb(70, 70, 70)">$0102 USD</p>
+<button class="btn_buy">Buy now</button>
+</div>
+</div>
+
+</div><!----------flex--->
+
+</div>
+
+</div><!----------flex2--->
+
+
+</div><!----------homecontent1--->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="block">
+
+<div class="blue_bg">
+<div class="custom-shape-divider-top-1695614567">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+    </svg>
+</div>
+
+
+
+
+<div data-aos="flip-left">
+
+<center>
+  <h1 class="title" style="color:white">Discover What Everyone's Raving About.</h1>
+</center>
+
+</div>
+
+
+<div class="custom-shape-divider-bottom-1695614757">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+    </svg>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="white_bg"><!----------white_bg--->
+
+
+
+
+
+
+
+
+
+
+<div class="scrollbar1"><!----------homecontent_nomargin--->
+
+
+
+
+
+
+
+<div class="head_title10"><!----------head title--->
+
+
+ <div class="block"><!----------block--->
+ <div data-aos="fade-up"data-aos-duration="3000"><!----------aos--->
+     <div class="gitna"> <!----------gitna--->
+
+<div class="class1"><!----------class1------>
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="rgb(70, 70, 70)" class="bi bi-cart3" viewBox="0 0 16 16">
+<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+</svg>                   
+</div><!----------class1------>
+               
+        <div class="class2"><!----------class2------>
+         Best Sellers: Where Quality Meets Popularity
+       </div><!----------class2------>
+
+
+       </div><!----------gitna--->
+  </div><!----------aos--->
+  </div><!----------block--->
+
+
+
+
+  <div class="none"> <!----------none------>
+
+
+  <div class="gitna1"> <!----------gitna1--->
+
+<div class="class1"><!----------class1------>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgba(168, 76, 0, 0.925)" class="bi bi-cart3" viewBox="0 0 16 16">
+<path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+</svg>                  
+</div><!----------class1------>
+               &nbsp;
+        <div class="class2"><!----------class2------>
+         BEST SELLER:
+       </div><!----------class2------>
+
+
+     
+
+       </div><!----------gitna1--->
+
+
+
+       <div class="gitna1"> <!----------gitna1--->
+       <div class="class1" style="color:gray"><!----------class1------>
+       see more 
+       </div><!----------class1------>
+
+       <div class="class2"><!----------class2------>
+       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="gray" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+  <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+</div><!----------class2------>
+</div><!----------gitna1--->
+
+</div><!----------none------>
+
+  </div><!----------head title--->
+
+
+
+
+
+ <div class="bestseller"><!----------bestseller--->
+
+
+
+<div class="list_best">
+
+<img src="image/1.png" class="img_item" style="border-radius:20px 20px 0px 0px">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+
+<div class="list_best">
+
+<img src="image/2.png" class="img_item" style="border-radius:20px 20px 0px 0px">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+
+
+
+<div class="list_best">
+
+<img src="image/3.png" class="img_item" style="border-radius:20px 20px 0px 0px">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+
+
+<div class="list_best">
+
+<img src="image/1.png" class="img_item" style="border-radius:20px 20px 0px 0px">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+
+<div class="list_best">
+
+<img src="image/2.png" class="img_item" style="border-radius:20px 20px 0px 0px">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+
+
+
+<div class="list_best">
+
+<img src="image/3.png" class="img_item" style="border-radius:20px 20px 0px 0px">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+
+
+
+<div class="list_best">
+
+<img src="image/3.png" class="img_item" style="border-radius:20px 20px 0px 0px">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="list_best">
+
+<img src="image/3.png" class="img_item" style="border-radius:20px 20px 0px 0px">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="list_best">
+
+<img src="image/3.png" class="img_item" style="border-radius:20px 20px 0px 0px">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="list_best">
+
+<img src="image/3.png" class="img_item" style="border-radius:20px 20px 0px 0px">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+</div><!----------bestseller--->
+
+
+<br>
+</div><!----------homecontent_nomargin--->
+
+</div><!----------white_bg--->
+
+<div class="custom-shape-divider-top-1695715257">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+    </svg>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+
+  </style>
+
+
+
+
+<!----------recomendation------------------------------------------------------------------------------------------------------------>
+
+
+<div class="none">
+<div class="custom-shape-divider-bottom-1695880371">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+    </svg>
+</div>
+</div>
+
+<div class="none">
+<h1 class="recomendation_title">Recomendation for you</h1>
+</div>
+
+
+
+
+
+<div class="none">
+<div class="custom-shape-divider-top-1695880247">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+    </svg>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div class="homecontent1"><!----------homecontent1--->
+
+<div class="block">
+<h1 class="recomendation_title">Recomendation for you</h1>
+
+
+
+</div>
+
+<br>
+<div class="flex_smallgap">
+
+
+<div class="list_items">
+
+<img src="image/1.png" class="img_item">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+<div class="list_items">
+
+<img src="image/2.png" class="img_item">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+<div class="list_items">
+
+<img src="image/3.png" class="img_item">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+<div class="list_items">
+
+<img src="image/1.png" class="img_item">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+<div class="list_items">
+
+<img src="image/2.png" class="img_item">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+<div class="list_items">
+
+<img src="image/3.png" class="img_item">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+
+<div class="list_items">
+
+<img src="image/1.png" class="img_item">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+<div class="list_items">
+
+<img src="image/2.png" class="img_item">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+<div class="list_items">
+
+<img src="image/3.png" class="img_item">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+<div class="list_items">
+
+<img src="image/4.jpeg" class="img_item">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+<div class="list_items">
+
+<img src="image/4.jpg" class="img_item">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+<div class="list_items">
+
+<img src="image/1.png" class="img_item">
+<div class="txt_btn">
+<h4>Lorem ipsum</h4>
+<h5 style="color:rgb(168, 76, 0)">$980 USD</h5>
+</div>
+
+</div>
+
+
+</div>
+</div><!----------homecontent1--->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="white_bg">
+
+<div class="block">
+<div class="custom-shape-divider-top-1695613949">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+    </svg>
+</div>
+
+
+<div class="homecontent1"><!----------homecontent1--->
+
+<div class="flex"><!----------flex--->
+
+<div class="board">
+
+
+
+
+
+
+  <style>
+
+
+    /**********************************pop up**************************************/
+    
+    
+    
+    
+    .box{
+    
+    width:250px;
+    margin:0 10px;
+    box-shadow: 0 0 20px 2px rgba (0, 0, 0, .1);
+    transition: 1s;
+    align-items: center;
+    }
+    
+    
+    .box img{
+    display: block;
+    width: 270%;
+    
+    
+    }
+    
+    .box:hover{
+    transform:scale(1.3);
+    z-index:2;
+    }
+    
+    
+    
+    
+    .cp{
+      height: 650px;
+      width: 320px;
+         background:  url(image/cp3.png);
+         background-size:100% 100%;  
+         align-items: center;  
+         border:0px solid red;
+         padding-top:5rem;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @media screen and (max-width: 900px) 
+     
+    
+     {
+    
+    
+    
+         .box{
+    display:none;
+    }
+    
+    
+    .box img{
+    
+         display:none;
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    .cp{
+         display:none;
+    }
+    
+    
+    
+    
+    }
+    /******************************************************************************/
+    
+        </style>
+    
+    
+    
+    <div class="box" >
+    
+    
+    <div class = "cp">
+    
+    <center>
+    
+    
+    <video width="70%" height="70%" loop muted autoplay="autoplay">
+      <source src="image/vid.mp4" type="video/mp4">
+    </video>
+    
+    </center>
+    
+    </div>
+    </div>
+    
+
+
+
+</div>
+
+<div class="tagline">
+<div data-aos="flip-left"   data-aos-duration="2000">
+<h1 class="title">Shop with us now and use our $30 off voucher 372drbrz for a discount!</h1>
+</div>
+</div>
+
+
+</div><!----------flex--->
+
+</div><!----------homecontent1--->
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  .sample{
+  
+    height:50vh;
+    width:100%;
+    background-color: #046EB2;
+    display:grid;
+    place-items:center;
+    color:white;
+  }
+  
+  </style>
+  
+  
+  
+  
+  <div class="sample"> 
+  
+  
+  <h1>FOOTER</h1>
+  
+  
+  
+  </div>
+
+
+
+
+
+
+
+
+  
+<style>
+
+  .nav_bellow {
+              display:none;
+            
+              }
+  
+  
+  
+   /* Styles for mobile */
+   @media (max-width: 900px) {
+              .nav_bellow {
+              display:block;
+                  position: sticky;
+                  bottom: 0;
+                  top: auto;
+                  background-color: white;
+                  border:1px solid lightgray;
+                  color: white;
+                  padding: 5px;
+                  z-index: 500000;
+                  border-radius:25px 25px 0px  0px;
+              }
+  
+  
+  .link{
+      padding:5px;
+      border:0px solid red;
+      color:black;
+  
+      font-size: clamp(0.6875rem, 0.4375rem + 0.3125vw, 0.8125rem);
+  }
+  
+  .link_home{
+      padding:5px;
+      border:0px solid red;
+      color:black;
+  
+      place-items:center;
+     
+  border-radius:50px;
+  
+      font-size: clamp(0.6875rem, 0.4375rem + 0.3125vw, 0.8125rem);
+  }
+  
+  
+  
+          }
+          
+      
+  
+         
+  
+  
+  
+  </style>
+    
+    
+    
+  
+      <div class="nav_bellow">
+        
+  <div style="display:flex; justify-content: space-between; gap:5px">
+  
+  <div class="link">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"  fill="currentColor" class="bi bi-bag-plus-fill" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zM8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5V8z"/>
+  </svg>
+  
+  
+      </div>
+  
+  
+  
+  
+  
+  
+  
+      <div class="link">
+  
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"   fill="currentColor" class="bi bi-journal-bookmark-fill" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8V1z"/>
+    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+  </svg>
+  
+      </div>
+  
+  
+  
+  
+  
+  
+  
+      <div class="link_home">
+   
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"  fill="currentColor" class="bi bi-houses-fill" viewBox="0 0 16 16">
+    <path d="M7.207 1a1 1 0 0 0-1.414 0L.146 6.646a.5.5 0 0 0 .708.708L1 7.207V12.5A1.5 1.5 0 0 0 2.5 14h.55a2.51 2.51 0 0 1-.05-.5V9.415a1.5 1.5 0 0 1-.56-2.475l5.353-5.354L7.207 1Z"/>
+    <path d="M8.793 2a1 1 0 0 1 1.414 0L12 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l1.854 1.853a.5.5 0 0 1-.708.708L15 8.207V13.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 4 13.5V8.207l-.146.147a.5.5 0 1 1-.708-.708L8.793 2Z"/>
+  </svg>
+  
+      </div>
+  
+  
+  
+  
+  
+  
+      <div class="link">
+  
+  
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"   fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+  </svg>
+  
+      </div>
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="link">
+  
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"   fill="currentColor" class="bi bi-person-fill-gear" viewBox="0 0 16 16">
+    <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Zm9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+  </svg>
+  
+      </div>
+  
+  
+  </div>
+  
+      </div>
+  
+  
+
+
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("featured_img");
+  
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+<script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds (2000 milliseconds)
+        }
+    </script>
+
+
+
+
+</body>
+</html>
